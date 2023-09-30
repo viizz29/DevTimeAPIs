@@ -1,11 +1,16 @@
 from api_server import APIServer
 
 
-from batches import Batches
-from batch import Batch
-from students import Students
-from student import Student
-from fees import Fees
+from apis.batches import Batches
+from apis.batch import Batch
+from apis.students import Students
+from apis.student import Student
+from apis.fees import Fees
+from apis.new_admissions import NewAdmissions
+from apis.display_picture import DisplayPicture
+from apis.recent_fees import RecentFees
+from apis.pending_fees import PendingFees
+from apis.summary import Summary
 
 PORT_NUMBER = 4567
 
@@ -16,6 +21,12 @@ apis = [
             (r'/api/students', Students),
             (r'/api/student', Student),
             (r'/api/fees', Fees),
+
+            (r'/api/new-admissions', NewAdmissions),
+            (r'/api/dp', DisplayPicture),
+            (r'/api/recent-fees', RecentFees),
+            (r'/api/pending-fees', PendingFees),
+            (r'/api/summary', Summary),
 
 ]
     

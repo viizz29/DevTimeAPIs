@@ -1,0 +1,54 @@
+import tornado
+import json
+
+data = [
+    {
+        'id':1,
+        'uid': 43,
+        'name': 'Tanisha Paul',
+        'amount': 500,
+        'date': '2023-08-02',
+    },
+    {
+        'id':2,
+        'uid': 38,
+        'name': 'Gautam Kumar',
+        'amount': 1000,
+        'date': '2023-08-02',
+    },
+    {
+        'id':3,
+        'uid': 42,
+        'name': 'Mayank Sahoo',
+        'amount': 500,
+        'date': '2023-08-02',
+    },
+    {
+        'id':4,
+        'uid': 100,
+        'name': 'Suraj Yadav',
+        'amount': 500,
+        'date': '2023-08-02',
+    },
+    {
+        'id':5,
+        'uid': 56,
+        'name': 'Poonam Kumar',
+        'amount': 500,
+        'date': '2023-08-02',
+    },
+    {
+        'id':6,
+        'uid': 80,
+        'name': 'Rohit Kumar',
+        'amount': 500,
+        'date': '2023-08-02',
+    },
+]
+
+class RecentFees(tornado.web.RequestHandler):
+    def get(self):
+        self.write(json.dumps(data))
+
+    def post(self):
+        self.write("Not supported")

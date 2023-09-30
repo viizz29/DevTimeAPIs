@@ -1,9 +1,9 @@
 import tornado
 import json
 
-class Fees(tornado.web.RequestHandler):
-    def get(self):
-        data = [
+data = {
+    'name': 'Suraj Kumar',
+    'fees': [
             {
                 'id':1,
                 'name': 'Suraj Kumar',
@@ -14,13 +14,16 @@ class Fees(tornado.web.RequestHandler):
             },
             {
                 'id':2,
-                'name': 'Rani Kumari',
+                'name': 'Suraj Kumar',
                 'standard': 12,
                 'amount': 700,
-                'date': '2023-02-02',
-                "remark": "paid through google pay"
-            }
+                'date': '2023-02-01',
+                'remark': "paid cash."
+            },
         ]
+}
+class Fees(tornado.web.RequestHandler):
+    def get(self):
         self.write(json.dumps(data))
 
     def post(self):
