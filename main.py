@@ -16,17 +16,19 @@ PORT_NUMBER = 4567
 
 
 apis = [
+            (r'/api/summary', Summary),
+            (r'/api/new-admissions', NewAdmissions),
+            (r'/api/recent-fees', RecentFees),
+            (r'/api/pending-fees', PendingFees),
+            (r'/api/dp', DisplayPicture),
+
             (r'/api/batches', Batches),
             (r'/api/batch', Batch),
             (r'/api/students', Students),
             (r'/api/student', Student),
             (r'/api/fees', Fees),
 
-            (r'/api/new-admissions', NewAdmissions),
-            (r'/api/dp', DisplayPicture),
-            (r'/api/recent-fees', RecentFees),
-            (r'/api/pending-fees', PendingFees),
-            (r'/api/summary', Summary),
+            
 
 ]
     
