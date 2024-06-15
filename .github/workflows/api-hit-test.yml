@@ -1,12 +1,11 @@
 name: API hit demo
-uses: muhfaris/request-action@v0.1.2
 run-name: ${{ github.actor }} is deploying to server through API call 🚀
 on:
   push:
     branches:
       - main
 jobs:
-  Explore-GitHub-Actions:
+  Deploy-Using-API:
     runs-on: ubuntu-latest
     steps:
       - name: Make API Request
